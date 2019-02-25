@@ -23,7 +23,7 @@ public class MessageController {
 	}
 
 	@PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.ACCEPTED)
     public String createNewGarage(@RequestBody Message message){
 		messageService.sendMessage(message);
         return "Message sent";
